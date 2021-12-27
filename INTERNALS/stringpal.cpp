@@ -10,11 +10,14 @@ public:
         }
         for (int i = 0; i < s.length(); i++) {
             if (st.top() != s[i]) {
+                st.pop();
                 return false;
             }
-            st.pop();
+            else{
+                st.pop();
+                return true;
+            }
         }
-        return true;
     }
 };
 int main() {
